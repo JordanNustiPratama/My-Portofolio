@@ -1,0 +1,394 @@
+/*MY VLOG*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #181a1b;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 60px 0 60px;
+    background: transparent;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.logo .accent {
+    color: #e74c3c;
+}
+
+nav ul {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 60px 0 60px;
+    min-height: 80vh;
+    position: relative;
+    background: #181a1b;
+    overflow: hidden;
+}
+
+.hero-content {
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin: 0 0 24px 0;
+}
+
+.hero-content .accent {
+    color: #e74c3c;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 0;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.hero-image {
+    width: 500px;
+    height: px;
+    background: rgba(255,255,255,0.02);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+    background-size: 32px 32px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+@media (max-width: 900px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+
+    .main-header, .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px;
+    }
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 48px;
+    }
+    .hero-image {
+        width: 220px;
+        height: 220px;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/*MY STORY*/
+.story-section {
+    max-width: 700px;
+    margin: 60px auto 0 auto;
+    background: rgba(30,32,34,0.95);
+    padding: 40px 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+}
+
+.story-section h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.story-section p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #e0e0e0;
+    margin-bottom: 18px;
+    text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .story-section {
+        padding: 24px 12px;
+        margin: 32px 8px 0 8px;
+    }
+    .story-section h1 {
+        font-size: 1.6rem;
+    }
+    .story-section p {
+        font-size: 1rem;
+    }
+}
+
+/*download CV button*/
+.btn-download-cv {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #e74c3c;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 24px;
+    transition: background 0.2s;
+}
+.btn-download-cv:hover {
+    background: #c0392b;
+}
+
+/* Biodata Styles */
+.biodata-section {
+    padding-bottom: 60px;
+}
+
+.biodata-container {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin-top: 30px;
+    align-items: flex-start;
+}
+
+.profile-image {
+    flex: 0 0 200px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    border: 3px solid #e74c3c;
+}
+
+.biodata-details {
+    flex: 1;
+}
+
+.biodata-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 12px;
+}
+
+.biodata-label {
+    font-weight: 700;
+    color: #e74c3c;
+    width: 35%;
+    vertical-align: top;
+}
+
+.biodata-separator {
+    width: 5%;
+    color: #fff;
+    text-align: center;
+    vertical-align: top;
+}
+
+.biodata-value {
+    color: #e0e0e0;
+    vertical-align: top;
+}
+
+/* Responsive Biodata */
+@media (max-width: 768px) {
+    .biodata-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    
+    .profile-image {
+        flex: 0 0 180px;
+        width: 180px;
+    }
+    
+    .biodata-table {
+        border-spacing: 0 8px;
+    }
+    
+    .biodata-label {
+        width: 40%;
+    }
+}
+
+/* Contact Info Styles */
+.contact-info {
+    margin-top: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #e74c3c;
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+}
+
+.contact-list li strong {
+    color: #e0e0e0;
+    margin-right: 8px;
+}
+
+.contact-list li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.contact-list li a:hover {
+    color: #e74c3c;
+    text-decoration: underline;
+}
+
+/* Contact Form Styles */
+.contact-form {
+    margin-top: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #e0e0e0;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    color: #fff;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e74c3c;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+.btn-submit {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #e74c3c;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.2s;
+    border: none;
+    cursor: pointer;
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.btn-submit:hover {
+    background: #c0392b;
+}
+
+#status-message {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+#status-message.success {
+    background: rgba(46, 204, 113, 0.2);
+    color: #2ecc71;
+    border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+#status-message.error {
+    background: rgba(231, 76, 60, 0.2);
+    color: #e74c3c;
+    border: 1px solid rgba(231, 76, 60, 0.3);
+}
