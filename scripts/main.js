@@ -25,6 +25,7 @@ window.addEventListener("mousemove", function (e) {
         top: `${posY}px`
     }, { duration: 500, fill: "forwards" });
 });
+
 const links = document.querySelectorAll('a, button');
 links.forEach(link => {
     link.addEventListener('mouseenter', () => {
@@ -35,4 +36,11 @@ links.forEach(link => {
         cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
         cursorOutline.style.backgroundColor = 'transparent';
     });
+});
+
+var typed = new Typed('.typing', {
+  strings: ['Web Developer', 'Designer', 'Freelancer'],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true
 });
