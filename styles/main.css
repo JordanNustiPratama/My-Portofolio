@@ -433,3 +433,19 @@ body {
         cursor: auto;
     }
 }
+
+/* Efek memperbesar sedikit saat kursor di atas gambar/kartu */
+.project-card {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px); /* Naik sedikit ke atas */
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Efek tombol bersinar */
+.btn-primary:hover {
+  filter: brightness(1.2);
+  letter-spacing: 1px;
+}
